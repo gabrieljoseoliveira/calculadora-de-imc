@@ -2,7 +2,7 @@ function calcularIMC() {
 
     const form = window.document.querySelector(`.form`);
     const table = window.document.querySelector(`.table`);
-    const cálculo = window.document.querySelector(`#cálculo`);
+    const calculo = window.document.querySelector(`#calculo`);
 
     form.addEventListener(`submit`, function (e) {
 
@@ -14,7 +14,7 @@ function calcularIMC() {
 
         const IMC = peso.value / (altura.value ** 2);
 
-        cálculo.innerHTML += ` ${IMC.toFixed(2)}`;
+        calculo.innerHTML += ` ${IMC.toFixed(2)}`;
 
         if (IMC < 18.5) {
 
@@ -60,7 +60,7 @@ border-radius: 10px">Obesidade grau 3</span>`;
 
         } else if (!IMC) {
 
-            cálculo.innerHTML = `Calcule seu IMC: Valores inválidos!`;
+            calculo.innerHTML = `Calcule seu IMC: Valores inválidos!`;
 
         }
 
@@ -68,7 +68,7 @@ border-radius: 10px">Obesidade grau 3</span>`;
 
     function limparTabela() {
 
-        cálculo.innerHTML = `Calcule seu IMC:`;
+        calculo.innerHTML = `Calcule seu IMC:`;
 
         const linha1 = table.rows[1].cells[1];
         linha1.innerHTML = `Abaixo do peso`;
